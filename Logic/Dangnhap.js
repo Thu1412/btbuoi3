@@ -11,6 +11,7 @@ export default function Dangnhap({ navigation }) {
 
   const handleLogin = () => {
     if (email === exampleEmail && password === examplePassword) {
+      setLoginMessage('Đăng nhập thành công!'); 
     } else {
       setLoginMessage('Đăng nhập thất bại!! Hãy kiểm tra lại !!'); 
     }
