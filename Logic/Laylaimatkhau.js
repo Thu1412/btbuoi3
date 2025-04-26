@@ -4,16 +4,15 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'reac
 const Laylaimatkhau = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false); // State để điều khiển hiển thị mật khẩu
+  const [showPassword, setShowPassword] = useState(false); 
 
   const handleSendResetEmail = () => {
-    // Kiểm tra email hợp lệ (Ví dụ đơn giản: kiểm tra nếu email không rỗng)
     if (email !== '') {
-      setPassword('Your new temporary password is: 123456');  // Gán mật khẩu tạm thời
-      setShowPassword(true);  // Hiển thị mật khẩu
+      setPassword('Mật khẩu của bạn là: anhthuw1412@');  
+      setShowPassword(true);  
     } else {
       setPassword('Please enter a valid email.');
-      setShowPassword(true);  // Hiển thị thông báo lỗi
+      setShowPassword(true);  
     }
   };
 
@@ -51,8 +50,8 @@ const styles = StyleSheet.create({
   container: { 
     flex: 1, 
     justifyContent: 'center', 
-    alignItems: 'center',  // Căn giữa toàn bộ nội dung trong container
-    backgroundColor: 'white',  // Màu nền trắng
+    alignItems: 'center',  
+    backgroundColor: 'white',  
     padding: 20 
   },
   title: { 
@@ -65,14 +64,14 @@ const styles = StyleSheet.create({
     borderRadius: 8, 
     padding: 10, 
     marginBottom: 10, 
-    width: '100%'  // Đảm bảo TextInput chiếm đủ không gian
+    width: '100%'  
   },
   button: { 
     backgroundColor: 'orange', 
     padding: 15, 
     borderRadius: 8, 
     marginTop: 10, 
-    width: '100%'  // Đảm bảo nút có chiều rộng đầy đủ
+    width: '100%' 
   },
   buttonText: { 
     textAlign: 'center', 
@@ -87,11 +86,11 @@ const styles = StyleSheet.create({
   image: { 
     width: 150, 
     height: 150, 
-    marginBottom: 20  // Đảm bảo hình ảnh có khoảng cách với các phần tử khác
+    marginBottom: 20  
   },
   password: {
     marginTop: 10,
-    color: 'green',  // Màu của mật khẩu hiển thị (hoặc thông báo lỗi)
+    color: 'green',  
     textAlign: 'center',
   }
 });

@@ -4,18 +4,17 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'reac
 export default function Dangnhap({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loginMessage, setLoginMessage] = useState(''); // State để lưu thông báo đăng nhập
+  const [loginMessage, setLoginMessage] = useState(''); 
 
-  // Tài khoản ví dụ
-  const exampleEmail = 'user@example.com';
-  const examplePassword = 'password123';
+
+  const exampleEmail = '2124802010556@student.tdmu.edu.vn';
+  const examplePassword = 'anhthuw1412@';
 
   const handleLogin = () => {
-    // Kiểm tra email và password
     if (email === exampleEmail && password === examplePassword) {
-      setLoginMessage('Login successful!'); // Đăng nhập thành công
+      setLoginMessage('Đăng nhập thành công!'); 
     } else {
-      setLoginMessage('Login failed. Please check your email and password.'); // Đăng nhập thất bại
+      setLoginMessage('Đăng nhập thất bại !! vui lòng thử lại!!!'); 
     }
   };
 
@@ -68,7 +67,7 @@ const styles = StyleSheet.create({
     flex: 1, 
     justifyContent: 'center', 
     padding: 20, 
-    backgroundColor: 'white'  // Màu nền trắng cho View
+    backgroundColor: 'white'  
   },
   title: { 
     fontSize: 24, 
@@ -103,17 +102,17 @@ const styles = StyleSheet.create({
   },
   linkButton: {
     alignItems: 'center',
-    marginTop: 10, // Đảm bảo nút có khoảng cách thích hợp
+    marginTop: 10, 
   },
   image: { 
-    width: 150,  // Điều chỉnh kích thước hình ảnh
+    width: 150,  
     height: 150, 
-    alignSelf: 'center',  // Căn giữa hình ảnh
+    alignSelf: 'center',  
     marginBottom: 20 
   },
   message: {
     marginTop: 10,
-    color: 'green',  // Màu thông báo thành công
+    color: 'green',  
     textAlign: 'center',
   },
 });

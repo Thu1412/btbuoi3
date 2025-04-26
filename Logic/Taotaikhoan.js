@@ -5,14 +5,14 @@ const Taotaikhoan = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [message, setMessage] = useState(''); // State để lưu thông báo tạo tài khoản
+  const [message, setMessage] = useState('');
 
   const handleSignup = () => {
-    // Kiểm tra mật khẩu và xác nhận mật khẩu
+    
     if (password === confirmPassword) {
-      setMessage('Account created successfully!'); // Tạo tài khoản thành công
+      setMessage('Tạo tài khoản thành công!'); 
     } else {
-      setMessage('Passwords do not match. Please try again.'); // Mật khẩu không khớp
+      setMessage('Mật khẩu không khớp!! Vui lòng thử lại'); 
     }
   };
 
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     flex: 1, 
     justifyContent: 'center', 
     padding: 20, 
-    backgroundColor: 'white'  // Thêm màu nền trắng cho View
+    backgroundColor: 'white'  
   },
   title: { 
     fontSize: 24, 
@@ -97,14 +97,14 @@ const styles = StyleSheet.create({
     textAlign: 'center' 
   },
   image: { 
-    width: 150, // Kích thước hình ảnh
+    width: 150,
     height: 150, 
-    alignSelf: 'center', // Căn giữa hình ảnh
+    alignSelf: 'center', 
     marginBottom: 20 
   },
   message: {
     marginTop: 10,
-    color: 'green',  // Màu thông báo thành công
+    color: 'green',  
     textAlign: 'center',
   },
 });
