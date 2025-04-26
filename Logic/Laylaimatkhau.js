@@ -39,8 +39,8 @@ const Laylaimatkhau = ({ navigation }) => {
       {/* Hiển thị mật khẩu hoặc thông báo lỗi */}
       {showPassword && <Text style={styles.password}>{password}</Text>}
 
-      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-        <Text style={styles.link}>Go back to Login</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Dangnhap')}>
+        <Text style={styles.link}>Go back to Dangnhap</Text>
       </TouchableOpacity>
     </View>
   );

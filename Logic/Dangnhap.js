@@ -4,17 +4,17 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'reac
 export default function Dangnhap({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loginMessage, setLoginMessage] = useState(''); 
+  const [DangnhapMessage, setDangnhapMessage] = useState(''); 
 
 
   const exampleEmail = '2124802010556@student.tdmu.edu.vn';
   const examplePassword = 'anhthuw1412@';
 
-  const handleLogin = () => {
+  const handleDangnhap = () => {
     if (email === exampleEmail && password === examplePassword) {
-      setLoginMessage('Đăng nhập thành công!'); 
+      setDangnhapMessage('Đăng nhập thành công!'); 
     } else {
-      setLoginMessage('Đăng nhập thất bại !! vui lòng thử lại!!!'); 
+      setDangnhapMessage('Đăng nhập thất bại !! vui lòng thử lại!!!'); 
     }
   };
 
@@ -44,18 +44,18 @@ export default function Dangnhap({ navigation }) {
       />
       {password === '' && <Text style={styles.error}>Password is a required field</Text>}
 
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Login</Text>
+      <TouchableOpacity style={styles.button} onPress={handleDangnhap}>
+        <Text style={styles.buttonText}>Dangnhap</Text>
       </TouchableOpacity>
 
       {/* Hiển thị thông báo đăng nhập */}
-      {loginMessage !== '' && <Text style={styles.message}>{loginMessage}</Text>}
+      {DangnhapMessage !== '' && <Text style={styles.message}>{DangnhapMessage}</Text>}
 
-      <TouchableOpacity onPress={() => navigation.navigate('Signup')} style={styles.linkButton}>
+      <TouchableOpacity onPress={() => navigation.navigate('Taotaikhoan')} style={styles.linkButton}>
         <Text style={styles.link}>Create a new account?</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate('ResetPassword')} style={styles.linkButton}>
+      <TouchableOpacity onPress={() => navigation.navigate('Laylaimatkhau')} style={styles.linkButton}>
         <Text style={styles.link}>Forgot Password?</Text>
       </TouchableOpacity>
     </View>

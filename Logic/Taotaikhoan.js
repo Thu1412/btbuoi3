@@ -7,7 +7,7 @@ const Taotaikhoan = ({ navigation }) => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSignup = () => {
+  const handleTaotaikhoan = () => {
     
     if (password === confirmPassword) {
       setMessage('Tạo tài khoản thành công!'); 
@@ -48,14 +48,14 @@ const Taotaikhoan = ({ navigation }) => {
         onChangeText={setConfirmPassword}
       />
 
-      <TouchableOpacity style={styles.button} onPress={handleSignup}>
-        <Text style={styles.buttonText}>Signup</Text>
+      <TouchableOpacity style={styles.button} onPress={handleTaotaikhoan}>
+        <Text style={styles.buttonText}>Taotaikhoan</Text>
       </TouchableOpacity>
 
       {/* Hiển thị thông báo */}
       {message !== '' && <Text style={styles.message}>{message}</Text>}
 
-      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+      <TouchableOpacity onPress={() => navigation.navigate('Dangnhap')}>
         <Text style={styles.link}>Already have an account?</Text>
       </TouchableOpacity>
     </View>
